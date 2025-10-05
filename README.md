@@ -2,14 +2,6 @@
 
 A FastAPI backend application for managing donations with full CRUD operations.
 
-## Features
-
-- **Full CRUD Operations**: Create, Read, Update, and Delete donations
-- **SQLite Database**: Lightweight database with SQLAlchemy ORM
-- **Data Validation**: Pydantic models for request/response validation
-- **Interactive API Documentation**: Auto-generated docs with Swagger UI
-- **Statistics Endpoint**: Get donation statistics and summaries
-
 ## Quick Start
 
 ### 1. Install Dependencies
@@ -101,22 +93,3 @@ curl -X DELETE "http://localhost:8000/donations/1"
 ## Database
 
 The application uses SQLite with a local file called `donations.db`. The database is created automatically when you first run the application.
-
-## Development
-
-The code is well-structured with:
-
-- **Database Models**: SQLAlchemy models in `DonationDB`
-- **API Schemas**: Pydantic models for validation
-- **Error Handling**: Proper HTTP status codes and error messages
-- **Documentation**: Comprehensive docstrings and comments
-
-## Running in Production
-
-For production deployment, consider:
-
-1. Using a production ASGI server like Gunicorn
-2. Switching to PostgreSQL or MySQL for the database
-3. Adding authentication and authorization
-4. Implementing logging and monitoring
-5. Setting up environment-based configuration
