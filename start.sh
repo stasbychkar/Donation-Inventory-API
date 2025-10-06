@@ -1,7 +1,7 @@
 #!/bin/bash
 # Donation Inventory API Startup Script
 
-echo "🚀 Starting Donation Inventory API..."
+echo "Starting Donation Inventory API..."
 
 # Check if virtual environment exists
 if [ ! -d "venv" ]; then

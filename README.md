@@ -22,8 +22,6 @@ The API will be available at: `http://localhost:8000`
 
 Open your browser and go to: `http://localhost:8000/docs`
 
-This will show the interactive Swagger UI documentation where you can test all endpoints.
-
 ## API Endpoints
 
 ### Core CRUD Operations
