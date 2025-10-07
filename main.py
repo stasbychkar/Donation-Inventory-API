@@ -1,3 +1,5 @@
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from typing import List
 from fastapi import FastAPI, HTTPException, Depends
 from sqlalchemy.orm import Session
@@ -11,12 +13,6 @@ from contextlib import asynccontextmanager
 # FastAPI Application Setup
 # ================================
 
-app = FastAPI(
-    title="Donation Inventory API",
-    description="A REST API for managing donation inventory",
-    version="1.0.0"
-)
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     # Startup logic
@@ -24,7 +20,21 @@ async def lifespan(app: FastAPI):
     yield
     engine.dispose()
 
-app = FastAPI(lifespan=lifespan)
+app = FastAPI(
+    title="Donation Inventory API",
+    description="A REST API for managing donation inventory",
+    version="1.0.0",
+    lifespan=lifespan
+)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000",
+                   "https://main.d2jpq6ovjmilvo.amplifyapp.com"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # ================================
 # API Endpoints
