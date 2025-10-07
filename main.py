@@ -91,9 +91,6 @@ async def update_donation(
     update_data = donation_update.dict(exclude_unset=True)
     
     for field, value in update_data.items():
-        if field == "date":
-            # Parse date if it's being updated
-            value = parse_date_string(value)
         setattr(db_donation, field, value)
     
     # Commit changes to database

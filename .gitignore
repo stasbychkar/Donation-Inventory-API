@@ -58,3 +58,7 @@ start.sh~
 
 # Temporary
 test_api.py
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

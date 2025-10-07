@@ -18,7 +18,7 @@ class DonationUpdate(BaseModel):
     donor_name: Optional[str] = Field(None, description="Name of the donor")
     donation_type: Optional[str] = Field(None, description="Type of donation")
     amount: Optional[float] = Field(None, gt=0, description="Amount of the donation")
-    date: Optional[str] = Field(None, description="Date of donation in YYYY-MM-DD format")
+    date: datetime.date = Field(None, description="Date of donation in YYYY-MM-DD format")
 
 class DonationResponse(DonationBase):
     """Model for donation responses"""
