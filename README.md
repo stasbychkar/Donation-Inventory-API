@@ -91,3 +91,7 @@ curl -X DELETE "http://localhost:8000/donations/1"
 ## Database
 
 The application uses SQLite with a local file called `donations.db`. The database is created automatically when you first run the application.
+
+## Frontend
+
+The frontend implementation of the application: [Donation Inventory Frontend](https://github.com/stasbychkar/Donation-Inventory-Frontend)
